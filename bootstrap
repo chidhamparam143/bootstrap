@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            background: #f2f4f7;
+        }
+
+        .registration-card {
+            max-width: 850px;
+            margin: 50px auto;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 15px 15px 0 0 !important;
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card registration-card">
+
+        <!-- Header -->
+        <div class="card-header">
+            <h2 class="mb-1">Create an Account</h2>
+            <p class="mb-0">Please fill in the details below</p>
+        </div>
+
+        <div class="card-body p-4">
+
+            <!-- Registration Form -->
+            <form class="needs-validation" novalidate>
+
+                <div class="row g-3">
+
+                    <!-- First Name -->
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="firstName"
+                            placeholder="Enter first name"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter your first name.
+                        </div>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            placeholder="Enter last name"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter your last name.
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="example@gmail.com"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="phone"
+                            placeholder="Enter phone number"
+                            pattern="[0-9]{10}"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter a valid 10-digit phone number.
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Enter password"
+                            minlength="6"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Password must contain at least 6 characters.
+                        </div>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="col-md-6">
+                        <label for="confirmPassword" class="form-label">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="confirmPassword"
+                            placeholder="Confirm password"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please confirm your password.
+                        </div>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="col-md-6">
+                        <label for="gender" class="form-label">
+                            Gender
+                        </label>
+
+                        <select class="form-select" id="gender" required>
+                            <option value="" selected disabled>
+                                Select Gender
+                            </option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <div class="invalid-feedback">
+                            Please select your gender.
+                        </div>
+                    </div>
+
+                    <!-- Qualification -->
+                    <div class="col-md-6">
+                        <label for="qualification" class="form-label">
+                            Qualification
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="qualification"
+                            required
+                        >
+                            <option value="" selected disabled>
+                                Select Qualification
+                            </option>
+                            <option>10th</option>
+                            <option>12th</option>
+                            <option>Diploma</option>
+                            <option>Undergraduate</option>
+                            <option>Postgraduate</option>
+                        </select>
+
+                        <div class="invalid-feedback">
+                            Please select your qualification.
+                        </div>
+                    </div>
+
+                    <!-- City -->
+                    <div class="col-md-6">
+                        <label for="city" class="form-label">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="city"
+                            placeholder="Enter your city"
+                            required
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter your city.
+                        </div>
+                    </div>
+
+                    <!-- State -->
+                    <div class="col-md-6">
+                        <label for="state" class="form-label">
+                            State
+                        </label>
+
+                        <select class="form-select" id="state" required>
+                            <option value="" selected disabled>
+                                Select State
+                            </option>
+                            <option>Tamil Nadu</option>
+                            <option>Kerala</option>
+                            <option>Karnataka</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Telangana</option>
+                        </select>
+
+                        <div class="invalid-feedback">
+                            Please select your state.
+                        </div>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="terms"
+                            >
+                                I agree to the Terms and Conditions.
+                            </label>
+
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="col-12 mt-4">
+                        <button
+                            type="submit"
+                            class="btn btn-primary btn-register"
+                        >
+                            Register
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+
+    (() => {
+        'use strict';
+
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.from(forms).forEach(form => {
+
+            form.addEventListener('submit', event => {
+
+                // Confirm password validation
+                const password =
+                    document.getElementById('password').value;
+
+                const confirmPassword =
+                    document.getElementById('confirmPassword');
+
+                if (password !== confirmPassword.value) {
+
+                    confirmPassword.setCustomValidity(
+                        "Passwords do not match"
+                    );
+
+                } else {
+
+                    confirmPassword.setCustomValidity("");
+                }
+
+
+                if (!form.checkValidity()) {
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                } else {
+
+                    event.preventDefault();
+
+                    alert("Registration successful!");
+
+                }
+
+                form.classList.add('was-validated');
+
+            }, false);
+
+        });
+
+    })();
+
+</script>
+
+</body>
+</html>
